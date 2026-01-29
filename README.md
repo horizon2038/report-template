@@ -19,3 +19,7 @@ make watch
 ```bash
 make open
 ```
+
+## Make a Report
+
+1. Edit `pages/paper.typ` to write your report.
