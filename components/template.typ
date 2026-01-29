@@ -30,6 +30,7 @@
     contact: contact,
     date: date,
   )
+  v(2em)
 
   /* ===== main body ===== */
   body
