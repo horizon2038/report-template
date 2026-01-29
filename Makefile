@@ -23,6 +23,7 @@ $(BUILDDIR)/$(TARGET) : $(MAIN_PAGE) $(PAGES) $(COMPONENTS) $(RESOURCES)
 	typst compile $< $@ --root $(ROOTDIR)
 
 watch : $(MAIN_PAGE)
+	mkdir -p $(BUILDDIR)
 	typst watch $^ $(BUILDDIR)/$(TARGET)
 
 clean :
