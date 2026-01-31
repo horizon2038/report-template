@@ -1,5 +1,7 @@
 # Report Template
 
+<img src="example/sample.png" alt="Typst Logo" width="500"/>
+
 Typstによるレポート作成のためのテンプレートです．
 
 This is a template for writing reports using Typst.
