@@ -14,8 +14,9 @@
             #text(14pt)[#author†] \
             #text(10pt)[
               // #date.year()-#date.month()-#date.day()
-              †#affiliation
+              †#contact, #affiliation
             ]
+            #v(1em)
         ]
     )
 }

@@ -1,7 +1,8 @@
 /* theme */
 #let BASE_COLOR = rgb("141414")
 #let MAIN_COLOR = rgb("ededed")
-#let ACCENT_COLOR = rgb("ff6f61")
+// #let ACCENT_COLOR = rgb("0099e6")
+#let ACCENT_COLOR = rgb("141414")
 
 #let configure(body) = {
 
@@ -10,7 +11,7 @@
   set page(
     paper: "a4",
     margin: (x: 25mm, y: 25mm),
-    columns: 1,
+    columns: 2,
   )
 
   /* text */
@@ -23,14 +24,34 @@
   show strong: set text(weight: "medium")
 
   /* heading */
+  set heading(numbering: "1.a")
   show heading: it => {
     text(font: "A-OTF Gothic MB101 Pr6N", weight: "medium")[#it]
     v(0.5em)
   }
   show heading.where(level: 1): set text(size: 24pt)
-  show heading.where(level: 2): set text(size: 20pt)
-  show heading.where(level: 3): set text(size: 18pt)
+  show heading.where(level: 2): set text(size: 16pt)
+  show heading.where(level: 3): set text(size: 12pt)
   show heading: set block(sticky: true)
+
+  show heading.where(level: 2): it => {
+    block(
+      stack(
+        dir: ltr,
+        spacing: 0.5em,
+        box(
+          rect(
+            width: 0.4em,
+            height: 0.8em,
+            fill: ACCENT_COLOR,
+            radius: 0pt,
+          ),
+          inset: (bottom: -0.1em),
+        ),
+        text(font: "A-OTF Gothic MB101 Pr6N", weight: "medium")[#it]
+      )
+    )
+  }
 
   /* figure */
   show figure: set block(breakable: true)
